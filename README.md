@@ -13,7 +13,7 @@ Supported tags
 ===
 
 * `10, latest` - Apache Sling Starter 10 - ( [Dockerfile](https://github.com/apache/sling-org-apache-sling-starter-docker/blob/10/Dockerfile) )
-* `9`- Apache Sling Launchpad 9 - ( [Dockerfile]https://github.com/apache/sling-org-apache-sling-starter-docker/blob/9/Dockerfile) )
+* `9`- Apache Sling Launchpad 9 - ( [Dockerfile](https://github.com/apache/sling-org-apache-sling-starter-docker/blob/9/Dockerfile) )
 
 Launching instructions
 ===
