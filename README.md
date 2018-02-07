@@ -1,29 +1,38 @@
-# Apache Sling Starter Docker image
+About Sling
+===
 
-The Launchpad Docker integration project is a helper aimed to make it
-simple to build an 'official' Sling docker image.
+[Apache Sling](https://sling.apache.org) is a framework for RESTful web-applications based on an extensible content tree.
 
-## Building a Docker image
+In a nutshell, Sling maps HTTP request URLs to content resources based on the request's path, extension and selectors. Using convention over configuration, requests are processed by scripts and servlets, dynamically selected based on the current resource. This fosters meaningful URLs and resource driven request processing, while the modular nature of Sling allows for specialized server instances that include only what is needed.
 
-$ docker build -t sling .
+Sling serves as basis for a variety of applications ranging from blogging engines all the way to enterprise content management systems.
 
-## Running a standalone Sling instance
+To learn more about Sling, see our [getting started](https://sling.apache.org/documentation/getting-started.html) and the [Sling website](https://sling.apache.org/) in general.
 
-To launch a docker instance named 'my-sling-container' bound to 
-port 8080 on the local machine, and with the /opt/sling/sling volume
-mounted at /srv/docker/sling in the local machine, execute:
+Supported tags
+===
 
-```
-$ docker run -ti -p 8080:8080 -v /srv/docker/sling:/opt/sling/sling \
-    --name my-sling-container sling
-```
+* `10, latest` - Apache Sling Starter 10 - ( [Dockerfile](https://github.com/apache/sling-org-apache-sling-starter-docker/blob/10/Dockerfile) )
+* `9`- Apache Sling Launchpad 9 - ( [Dockerfile](https://github.com/apache/sling-org-apache-sling-starter-docker/blob/9/Dockerfile) )
 
-## Running a Sling instance connected to MongoDB
+Launching instructions
+===
 
-There is a docker-compose-mongodb.yml file supplied which shows how to run
-the Sling launchpad in a docker container linked to a mongo one. To launch
-both containers, execute:
+In order to run a container with our image, execute:
 
-```
-$ docker-compose -f docker-compose-mongo.yml up
-```
+    docker run --name my-sling-container apache/sling
+
+The image exposes port `8080` and mounts a volume at `/opt/sling/sling`. You can control the JVM parameters by setting the JAVA_OPTS environment variable and the options passed to Sling by setting the SLING_OPTS environment variable. 
+
+A more complex example would be
+
+    docker run -d -p 8080:8080 -v /srv/docker/sling:/opt/sling/sling  -e JVM_OPTS=-Xm1g --name my-sling-container apache/sling
+ 
+
+Support
+===
+
+For questions, please use [the Apache Sling user's mailing list](http://sling.apache.org/project-information.html#mailing-lists).
+
+For bug reports, please use the [Apache Sling issue tracker](https://issues.apache.org/jira/browse/SLING).`
+
