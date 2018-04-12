@@ -35,3 +35,7 @@ Support
 For questions, please use [the Apache Sling user's mailing list](http://sling.apache.org/project-information.html#mailing-lists).
 
 For bug reports, please use the [Apache Sling issue tracker](https://issues.apache.org/jira/browse/SLING).`
+
+For Sling developers: how to deploy this image to DockerHub
+====
+See the [instructions on the Sling Wiki](https://cwiki.apache.org/confluence/display/SLING/Releasing+a+new+version+of+the+Sling+Starter#ReleasinganewversionoftheSlingStarter-DeploythedockerimageonDockerHub)
