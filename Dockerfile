@@ -4,6 +4,8 @@ MAINTAINER dev@sling.apache.org
 # build on top of the released Launchpad
 RUN mkdir -p /opt/sling
 RUN wget https://repo1.maven.org/maven2/org/apache/sling/org.apache.sling.starter/10/org.apache.sling.starter-10.jar -O /opt/sling/org.apache.sling.starter.jar
+COPY sha1sum.txt /tmp
+RUN sha1sum -c /tmp/sha1sum.txt
 WORKDIR /opt/sling/
 EXPOSE 8080
 VOLUME /opt/sling/sling
