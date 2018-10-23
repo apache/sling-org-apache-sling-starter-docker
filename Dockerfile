@@ -3,7 +3,7 @@ MAINTAINER dev@sling.apache.org
 
 # build on top of the released Launchpad
 RUN mkdir -p /opt/sling
-RUN wget https://repo1.maven.org/maven2/org/apache/sling/org.apache.sling.starter/10/org.apache.sling.starter-10.jar -O /opt/sling/org.apache.sling.starter.jar
+RUN wget https://repo1.maven.org/maven2/org/apache/sling/org.apache.sling.starter/11/org.apache.sling.starter-11.jar -O /opt/sling/org.apache.sling.starter.jar
 
 # sha1sum.txt must be updated when switching to a different jar,
 # or docker build will fail

@@ -1,1 +1,1 @@
-1940326db9874336a34d52e423a86ee5de5ca824  /opt/sling/org.apache.sling.starter.jar
+ff527945971f271cf1b2aa8d59ea7a04e53241a4  /opt/sling/org.apache.sling.starter.jar
