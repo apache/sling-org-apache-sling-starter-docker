@@ -7,4 +7,4 @@ sling:
     environment:
        - SLING_OPTS=-Dsling.run.modes=oak_mongo -Doak.mongo.uri=mongodb://mongo:27017
 mongo:
-    image: mongo:3.4
+    image: mongo:3.6
